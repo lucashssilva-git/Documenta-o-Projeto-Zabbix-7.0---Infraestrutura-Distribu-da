@@ -467,3 +467,10 @@ O fluxo de tráfego e as conexões da arquitetura consolidada funcionam da segui
 * **Infraestrutura Cliente A & B:** Possuem coletores locais `ZABBIX-PROXY` que agregam o monitoramento local (SNMP/AGENT) de switches, roteadores, NVRs, câmeras e servidores.
 * **Comunicação de Borda:** Os proxies de ambos os clientes comunicam-se via VPN/Internet através da porta padrão **10051** com o firewall de borda (`FORTINET/BORDA`).
 * **Segmentação Interna (Matriz):** O firewall direciona as requisições dos proxies externos para o **Servidor Zabbix 7.0 + Grafana v13** (IP: `<IP_NOVO_APLICACAO>`). Este servidor de aplicação realiza o tráfego interno do MariaDB exclusivamente pela porta **3306** em direção ao servidor isolado dedicado (**Servidor Banco de Dados MariaDB v10.11.14** - IP: `<IP_NOVO_BANCO_DADOS>`).
+
+---
+
+## Agradecimentos
+
+* À equipe pela confiança e autonomia, em especial a Breno Fernandes(Jairon) pelo direcionamento, informações e apoio sem isso esse projeto não 'vingaria'.
+* Às comunidades do **Zabbix**, **MariaDB** e **Grafana** por fornecerem soluções open-source de altíssimo nível que movem a observabilidade e o monitoramento avançado no mundo inteiro.
